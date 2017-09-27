@@ -1,6 +1,8 @@
 module Api
   class AuthController < ApplicationController
-    def index
+    skip_before_action :verify_authenticity_token
+
+    def create
       render json: {test: 'test'}, status: :ok
     end
   end

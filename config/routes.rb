@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resource :home, only: [:show], controller: :home
+  resource :installations, only: [:new]
+  resource :callback, only: [:show], controller: :callback
+  resource :githubapp_auth, only: [:create], controller: :githubapp_auth
   resources :select_repos, only: [:index]
+  resources :users, only: [:destroy]
   namespace :api, format: :json do
-    resources :auth, only: [:create]
+    resources :webhook, only: [:create]
   end
 end
 

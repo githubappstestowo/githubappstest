@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-
+ # ddd
   resource :installations, only: [:new]
   resource :callback, only: [:show], controller: :callback
   resource :githubapp_auth, only: [:create], controller: :githubapp_auth

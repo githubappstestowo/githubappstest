@@ -1,8 +1,10 @@
 module GithubApps
   module Responses
-    class OauthUser < GithubApps::Responses::Base
+    class AppInstallations < GithubApps::Responses::Base
       def initialize(token)
-        @uri = URI.parse([ENV['GITHUB_APPS_HOST'], "/user"].join)
+        @uri = URI.parse(
+          [ENV['GITHUB_APPS_HOST'], "/app/installations"].join
+        )
         @token = token
       end
 
@@ -18,6 +20,6 @@ module GithubApps
           request['Accept'] = "application/vnd.github.machine-man-preview+json"
         end
       end
-    end # class OauthUser
+    end # class AppInstallations
   end # module Responses
 end # module GithubApps

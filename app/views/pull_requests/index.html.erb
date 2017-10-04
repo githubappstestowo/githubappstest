@@ -1,0 +1,24 @@
+<h1>PRS</h1>
+
+
+<%- @pulls.each do |pull_request| %>
+  <div class='pr-content'>
+    <div class='pr-title'>Title: <%= pull_request.title %></div>
+    <% if pull_request.comments.present? %>
+      <h3>Comments:</h5>
+      <div class='pr-comments-content'>
+          <%- pull_request.comments.each do |comment| %>
+            <div class='pr-comment-conent'>
+              <div class='pr-comments-author'><%= comment.user %></div>
+              <div class='pr-comments-body'><%= comment.body %></div>
+            </div>
+          <% end %>
+      </div>
+    <% end %>
+
+    <h3>Add Comment:</h3>
+    <%= form_for '#' do %>
+
+    <% end %>
+  </div>
+<% end %>

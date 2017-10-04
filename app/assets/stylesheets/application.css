@@ -55,3 +55,32 @@ body {
 }
 
 
+.pr-content {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.pr-content .pr-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.pr-content .pr-comments-content {
+  padding: 0 20px;
+}
+
+.pr-content .pr-comments-content .pr-comment-conent {
+    border-bottom: 1px solid blue;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.pr-comments-author {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  padding-bottom: 10px;
+}
+
+

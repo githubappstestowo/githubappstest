@@ -1,0 +1,7 @@
+<h1>Repositories</h1>
+
+<ul>
+  <%- @repositories.each do |key, value| %>
+    <li>Login: <%= key %> | <%= link_to 'show', installation_pull_requests_path(installation_id: params[:id], repo: value) %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,6 @@
+<h1>Installations</h1>
+<ul>
+  <%- @installations.each do |login, installation_id| %>
+    <li>Login: <%= login %> | <%= link_to installation_id, installation_path(id: installation_id) %></li>
+  <% end %>
+</ul>

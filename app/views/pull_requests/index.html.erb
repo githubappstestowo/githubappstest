@@ -17,8 +17,15 @@
     <% end %>
 
     <h3>Add Comment:</h3>
-    <%= form_for '#' do %>
+    <%= form_tag comments_path do %>
+      <%= hidden_field_tag 'installation_id', @installation_id %>
+      <%= hidden_field_tag 'referrer_path', @request_uri %>
+      <%= hidden_field_tag 'path', pull_request.comments_url %>
 
+      <%= label_tag 'Body:' %>
+      <%= text_area_tag 'body' %>
+      <br>
+      <%= submit_tag 'Add' %>
     <% end %>
   </div>
 <% end %>

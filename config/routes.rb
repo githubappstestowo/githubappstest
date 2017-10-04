@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  resources :comments, only: [:create]
   resources :installations, only: [:index, :show] do
     resources :pull_requests, only: [:index]
   end
